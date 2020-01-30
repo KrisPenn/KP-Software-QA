@@ -2,6 +2,9 @@
 # Date: 01/30/20
 # Software Testing and QA
 
+
+################ RETIREMENT SAVINGS CALCULATOR #################################
+
 def retire():
     print("\n\nWelcome to the Savings Calculator!\n")
     print("To start, we will need some information.\n")
@@ -76,6 +79,8 @@ def getGoal():
     return
 
 
+################## BODY MASS INDEX CALCULATOR ###########################################
+
 def bmi():
     print("Welcome to the Body Mass Index application!\n")
     print("To start, we will need some information. Please enter it below.\n\n")
@@ -117,13 +122,12 @@ def bmi():
     return
 
 def getHeightFeet():
-    
     try:
         height = int(input("Enter height in feet without inches: "))
         return height
     except:
         print("You entered height with inches. Please try again.")
-        getHeight()
+        getHeightFeet()
     
 def getHeightInches():
     
@@ -133,7 +137,7 @@ def getHeightInches():
         return height
     except:
         print("You entered height with inches. Please try again.")
-        getHeight()
+        getHeightInches()
 
 def getWeight():
     try:
@@ -142,6 +146,10 @@ def getWeight():
     except:
         print("Please try again.")
         getWeight()
+
+
+#################### MAIN MENU ###############################################
+
 
 def mainMenu():
     print("Please choose an option below: ")
@@ -168,6 +176,11 @@ def mainMenu():
             print("If you would like to close the application, enter X.\n")
             ans = str(input("Enter answer here: "))
             ans = ans.upper()
+
+
+
+########### INITIAL START FUNCTION ###############################################
+
 
 def main():
     print("Welcome to the Decision Maker.\n")
