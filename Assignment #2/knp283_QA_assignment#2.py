@@ -59,7 +59,7 @@ def getSalary():
         return salary
     except:
         print("Invalid input. Please enter a number.\n")
-        getSalary()
+        retire()
 
 def getSavings():
     try:
@@ -67,7 +67,7 @@ def getSavings():
         return savings    
     except:
         print("Invalid input. Be sure you did not include the percentage symbol.\n")
-        getSavings()
+        retire()
 
 def getGoal():
     try:
@@ -75,8 +75,7 @@ def getGoal():
         return goal
     except:
         print("Invalid input.  Please enter just a number amount for your goal.\n")
-        getGoal()
-    return
+        retire()
 
 
 ################## BODY MASS INDEX CALCULATOR ###########################################
@@ -126,27 +125,28 @@ def getHeightFeet():
         height = int(input("Enter height in feet without inches: "))
         return height
     except:
-        print("You entered height with inches. Please try again.")
-        getHeightFeet()
+        print("Invalid Input. Please try again.")
+        bmi()
     
 def getHeightInches():
     
     try:
-        print("Enter the inches to your height.  For example if you are 5'6\"then enter 6.")
+        print("Enter the inches to your height.  For example if you are 5'6\" then enter 6.")
         height = int(input("Enter inches here: "))
+        height = int(height)
         return height
     except:
-        print("You entered height with inches. Please try again.")
-        getHeightInches()
+        print("Invalid Input. Please try again.")
+        bmi()
 
 def getWeight():
     try:
         weight = int(input("Enter your weight in pounds: "))
+        weight = int(weight)
         return weight
     except:
-        print("Please try again.")
-        getWeight()
-
+        print("Invalid input. Please try again.")
+        bmi()
 
 #################### MAIN MENU ###############################################
 
