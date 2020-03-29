@@ -26,7 +26,7 @@
       }
   </style>
   <meta charset="UTF-8">
-  <title>User Page</title>
+  <title>BMI Calc Page</title>
 </head>
 <body>
   <h1>Welcome to the Body Mass Index Calculator</h1>

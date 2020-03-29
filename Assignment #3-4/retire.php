@@ -12,7 +12,7 @@
       }
   </style>
   <meta charset="UTF-8">
-  <title>User Page</title>
+  <title>Retire Savings Calc Page</title>
 </head>
 <body>
   <h1>Welcome to the Retirement Savings Calculator</h1>
