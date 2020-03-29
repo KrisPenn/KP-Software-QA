@@ -43,12 +43,12 @@
           $met = True;
           $_SESSION['age'] = $age;
           $tick = False;
-          header("Location: retireSuccess.php");
+          header("Location: https://qa-assignment3-4.azurewebsites.net/retireSuccess.php");
         }
         elseif($age >= 100)
         {
           $tick = False;
-          header("Location: retireFail.php");
+          header("Location: https://qa-assignment3-4.azurewebsites.net/retireFail.php");
         }
       }
     }
