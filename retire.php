@@ -28,6 +28,7 @@
     if (isset($_POST['submit']))
     {
       $age = $_POST['age'];
+      $age2 = $_POST['age'];
       $salary = $_POST['salary'];
       $savings = $_POST['savings'];
       $goal = $_POST['goal'];
@@ -37,18 +38,16 @@
       $tick = True;
       while ($tick == True) {
         $total += $yearly;
-        $age += 1;
+        $age2 += 1;
         if ($total >= $goal)
         {
           $met = True;
           $_SESSION['age'] = $age;
           $tick = False;
-          header("Location: https://qa-assignment3-4.azurewebsites.net/retireSuccess.php");
         }
-        elseif($age >= 100)
+        elseif($age2 >= 100)
         {
           $tick = False;
-          header("Location: https://qa-assignment3-4.azurewebsites.net/retireFail.php");
         }
       }
     }
@@ -111,5 +110,19 @@
 
         <input type="submit" name="submit" value="Calculate">
     </form>
+    <br><br>
+
+    <?php
+    if ($met == True)
+    {
+      echo "<p>You will reach your goal when you are ", $age2, " years old.</p>";
+    }
+    else
+    {
+      echo "<p>You will not reach your goal before you are 100 years old.</p>";
+    }
+    ?>
+
+    <p><a href="start_page.php">Home</a></p>
 </body>
 </html>
